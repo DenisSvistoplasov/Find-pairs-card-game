@@ -6,7 +6,9 @@
   "scripts": {
     "build:prod": "cross-env NODE_ENV=production webpack",
     "build:dev": "cross-env NODE_ENV=development webpack",
-    "watch": "cross-env NODE_ENV=development webpack --watch"
+    "watch": "cross-env NODE_ENV=development webpack --watch",
+    "pre-deploy": "cross-env PRE_DEPLOY=true cross-env NODE_ENV=production webpack",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Denis Svistoplasov",
   "license": "ISC",

@@ -9,6 +9,7 @@ function absPath(pth) {
 const NODE_ENV = process.env.NODE_ENV;
 const mode = NODE_ENV ? NODE_ENV : 'development';
 const isProd = mode === 'production';
+const isPreDeploy = !!process.env.PRE_DEPLOY;
 module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
@@ -19,7 +20,7 @@ module.exports = {
   output: {
     path: absPath('dist'),
     filename: 'index.js',
-    publicPath: '/dist/',
+    publicPath: isPreDeploy ? '' : '/dist/',
   },
 
   module: {
