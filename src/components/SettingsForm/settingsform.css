@@ -1,0 +1,42 @@
+.settingsForm {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.inputs {
+  width: 100%;
+  max-width: 120px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.x, .y {
+  display: flex;
+  justify-content: space-between;
+}
+
+.x{
+  margin-bottom: 10px;
+}
+
+.xInput,.yInput{
+  max-width: 50px;
+  text-align: center;
+}
+
